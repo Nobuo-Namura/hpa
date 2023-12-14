@@ -74,32 +74,31 @@ x = res.X
 f = func(x)
 
 # Wing shape and spanwise distribution of variables and functions
-problem.hpa.plot_wing_characteristics()
+func.plot_wing_characteristics()
 
 # Wing deflection at flight and parked conditions
-problem.hpa.plot_deflection()
+func.plot_deflection()
 
 # 3D-plot of deflected wings
-problem.hpa.plot_wing3d()
+func.plot_wing3d()
 
 # Output design data as tables (csv)
-problem.hpa.save(path='./', DISTRIBUTION=True, PERFORMANCE=True, FIGURE=False)
+func.save(path='./', DISTRIBUTION=True, PERFORMANCE=True, FIGURE=False)
 ```
 
 
 ## Human-Powered Aircraft (HPA)
 HPA gain propulsion by the pilot pedaling like a bicycle to rotate a propeller. HPA typically have a wingspan of 20-35 [m], comparable to that of a passenger aircraft, yet their mass is only about 25-35 [kg]. They often feature wings made of foam and balsa wood, covered with heat-shrinkable film, and supported by carbon fiber reinforced plastic (CFRP) pipe frameworks. We focus on optimizing the main wing design of an HPA, including wing shape, lamination of CFRP pipe, dihedral angle at the wing root, wire tension, and payload. The wing segmentation number $n$ alters the problem's dimension. $n=4$ was used in the original paper, as illustrated in the following figures.
 
-<figure>
-<div style="text-align: center;">
+<p align="center">
 <img src="img/hpa.jpg" alt="HPA" width=300>
 <img src="img/variables.jpg" alt="wing" width=300>
-</div>
-</figure>
+</p>
 
 
 ## Benchmark Problem Definition
-The benchmark problems are formulated as single or multi-objective minimization problems:
+The benchmark problems are formulated as single or multi-objective minimization problems in the normalized design space:
+
 
 $$
 \begin{align*}
@@ -109,11 +108,11 @@ $$
 \end{align*}
 $$
 
-We classify problems as HPA $MNL$−$l$, where $M$ is the number of objectives, $N$ is the number of constraints (excluding box constraints), $L$ is the problem index, and $l \in \{0,1,2\}$ is the difficulty level, which may be omitted if irrelevant. Higher $l$ indicates greater design variable freedom. 
+We classify problems as HPA $MNL$ − $l$, where $M$ is the number of objectives, $N$ is the number of constraints (excluding box constraints), $L$ is the problem index, and $l \in \{ 0,1,2 \}$ is the difficulty level, which may be omitted if irrelevant. Higher $l$ indicates greater design variable freedom. 
 
-The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA\*$N$\*) can also be used as unconstrained problems (HPA\*0\*) by means of a pre-impremented penalty method. The following table summarizes the design variables dimension $|{\mathbf x}_l|$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
+The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA\*0\*) by means of a pre-impremented penalty method. The following table summarizes the design variables dimension $|{\mathbf x}_l|$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
 
-<center>
+<p align="center">
 
 | Problem | $\|{\mathbf x}_0\|$ | $\|{\mathbf x}_1\|$ | $\|{\mathbf x}_2\|$ |
 |--------------|-------|-------|-------|
@@ -138,7 +137,7 @@ The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objecti
 | HPA641, 601  | 18    | 33    | 189   |
 | HPA941, 901  | 19    | 34    | 190   |
 
-</center>
+</p>
 
 
 ## Licence
