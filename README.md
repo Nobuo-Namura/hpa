@@ -110,7 +110,7 @@ $$
 
 We classify problems as HPA $MNL$ − $l$, where $M$ is the number of objectives, $N$ is the number of constraints (excluding box constraints), $L$ is the problem index, and $l \in$ {0,1,2} is the difficulty level, which may be omitted if irrelevant. Higher $l$ indicates greater design variable freedom. 
 
-The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA \* 0 \*) by means of a pre-impremented penalty method. The following table summarizes the design variables dimension $|{\mathbf x}_l|$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
+The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA \* 0 \*) by means of a pre-impremented penalty method. The following table summarizes the design variable dimension $|{\mathbf x}_l|$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
 
 <p align="center">
 
