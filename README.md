@@ -2,7 +2,7 @@
 
 This repository provides the benchmark problems for single and multi-objective black-box optimization proposed in the following article. Please cite this article if you use these benchmark problems.
 
-Nobuo Namura, "Single and Multi-Objective Benchmark Problems Focusing on Human-Powered Aircraft Design", arXiv:xxxx-xxxxx, 2023.
+[Nobuo Namura, "Single and Multi-Objective Benchmark Problems Focusing on Human-Powered Aircraft Design", arXiv:2312.08953, 2023.](https://arxiv.org/abs/2312.08953)
 
 ## Requirements
 Python 3.8.10 was used in the implimentation.  
@@ -108,9 +108,9 @@ $$
 \end{align*}
 $$
 
-We classify problems as HPA $MNL$ − $l$, where $M$ is the number of objectives, $N$ is the number of constraints (excluding box constraints), $L$ is the problem index, and $l \in \{ 0,1,2 \}$ is the difficulty level, which may be omitted if irrelevant. Higher $l$ indicates greater design variable freedom. 
+We classify problems as HPA $MNL$ − $l$, where $M$ is the number of objectives, $N$ is the number of constraints (excluding box constraints), $L$ is the problem index, and $l \in$ {0,1,2} is the difficulty level, which may be omitted if irrelevant. Higher $l$ indicates greater design variable freedom. 
 
-The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA\*0\*) by means of a pre-impremented penalty method. The following table summarizes the design variables dimension $|{\mathbf x}_l|$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
+The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA \* 0 \*) by means of a pre-impremented penalty method. The following table summarizes the design variables dimension $|{\mathbf x}_l|$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
 
 <p align="center">
 
