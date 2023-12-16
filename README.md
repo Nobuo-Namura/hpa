@@ -5,7 +5,7 @@ This repository provides the benchmark problems for single and multi-objective b
 [Nobuo Namura, "Single and Multi-Objective Benchmark Problems Focusing on Human-Powered Aircraft Design", arXiv:2312.08953, 2023.](https://arxiv.org/abs/2312.08953)
 
 ## Requirements
-Python 3.8.10 was used in the implimentation.  
+Python 3.8.10 was used in the implementation.  
 To install requirements:
 
 ```
