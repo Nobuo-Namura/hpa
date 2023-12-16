@@ -30,8 +30,8 @@ func = HPA201(n_div=4, level=0, NORMALIZED=True)
 x = np.random.uniform(size=func.nx)
 f = func(x)
 ```
-* n_div: an integer indicating the wing segmentation number ($n$ in the paper) and alters the problem's dimension, n_div=4 for default setting. 
-* level: an integer indicating the diffuculty level of the problem ($l$ in the paper and following "Benchmark Problem Definition").
+* n_div: an integer (1,2,...) indicating the wing segmentation number ($n$ in the paper) and alters the problem's dimension, n_div=4 for default setting. 
+* level: an integer (0,1,2) indicating the diffuculty level of the problem ($l$ in the paper and following "Benchmark Problem Definition").
 * NORMALIZED: a boolian indicating use of normalized design variables (True) or not (False)
 * x: 1D numpy.ndarray of design varibales
 * f: 1D numpy.ndarray of objective functions
@@ -104,17 +104,17 @@ $$
 \begin{align*}
 & \text{minimize}   & \quad & {\mathbf F({\mathbf x}_l)} = (f_1({\mathbf x}_l), \cdots, f_M({\mathbf x}_l)) \\
 & \text{subject to} & \quad & {\mathbf G({\mathbf x}_l)} = (g_1({\mathbf x}_l), \cdots, g_N({\mathbf x}_l)) \leq 0 \\
-&                   & \quad & {\mathbf x}_l \in [0, 1]^{N_l} \\
+&                   & \quad & {\mathbf x}_l \in [0, 1]^{D_l} \\
 \end{align*}
 $$
 
 We classify problems as HPA $MNL$ − $l$, where $M$ is the number of objectives, $N$ is the number of constraints (excluding box constraints), $L$ is the problem index, and $l \in$ {0,1,2} is the difficulty level, which may be omitted if irrelevant. Higher $l$ indicates greater design variable freedom. 
 
-The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA \* 0 \*) by means of a pre-impremented penalty method. The following table summarizes the design variable dimension $|{\mathbf x}_l|$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
+The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA \* 0 \*) by means of a pre-impremented penalty method. The following table summarizes the design variable dimension $D_l$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
 
 <p align="center">
 
-| Problem | $\|{\mathbf x}_0\|$ | $\|{\mathbf x}_1\|$ | $\|{\mathbf x}_2\|$ |
+| Problem      | $D_0$ | $D_1$ | $D_2$ |
 |--------------|-------|-------|-------|
 | HPA131, 101  | 17    | 32    | 108   |
 | HPA142, 102  | 16    | 31    | 187   |
