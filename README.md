@@ -5,7 +5,7 @@ This repository provides the benchmark problems for single and multi-objective b
 [Nobuo Namura, "Single and Multi-Objective Benchmark Problems Focusing on Human-Powered Aircraft Design", arXiv:2312.08953, 2023.](https://arxiv.org/abs/2312.08953)
 
 ## Requirements
-Python 3.8.10 was used in the implimentation.  
+Python 3.8.10 was used in the implementation.  
 To install requirements:
 
 ```
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ## Usage
 ### Unconstrained problems
-Each problem is defined as a class object like HPA201 (see the fllowing "Benchmark Problem Definition" for details about naming rules). Such unconstrained problems can be used as:  
+Each problem is defined as a class object like HPA201 (see the following "Benchmark Problem Definition" for details about naming rules). Such unconstrained problems can be used as:  
 ```
 from aircraft.problem import HPA201
 import numpy as np
@@ -31,13 +31,13 @@ x = np.random.uniform(size=func.nx)
 f = func(x)
 ```
 * n_div: an integer (1,2,...) indicating the wing segmentation number ($n$ in the paper) and alters the problem's dimension, n_div=4 for default setting. 
-* level: an integer (0,1,2) indicating the diffuculty level of the problem ($l$ in the paper and following "Benchmark Problem Definition").
-* NORMALIZED: a boolian indicating use of normalized design variables (True) or not (False)
-* x: 1D numpy.ndarray of design varibales
+* level: an integer (0,1,2) indicating the difficulty level of the problem ($l$ in the paper and following "Benchmark Problem Definition").
+* NORMALIZED: a boolean indicating use of normalized design variables (True) or not (False)
+* x: 1D numpy.ndarray of design variables
 * f: 1D numpy.ndarray of objective functions
 
 ### Constrained problems
-Constraind problems like HPA241 are used as:
+Constrained problems like HPA241 are used as:
 ```
 from aircraft.problem import HPA241
 import numpy as np
@@ -110,7 +110,7 @@ $$
 
 We classify problems as HPA $MNL$ − $l$, where $M$ is the number of objectives, $N$ is the number of constraints (excluding box constraints), $L$ is the problem index, and $l \in$ {0,1,2} is the difficulty level, which may be omitted if irrelevant. Higher $l$ indicates greater design variable freedom. 
 
-The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA \* 0 \*) by means of a pre-impremented penalty method. The following table summarizes the design variable dimension $D_l$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
+The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objectives. Original constrained problems (HPA \* $N$ \*) can also be used as unconstrained problems (HPA \* 0 \*) by means of a pre-implemented penalty method. The following table summarizes the design variable dimension $D_l$ at $n=4$ for each problem and difficulty level. Further details are in the original paper.
 
 <p align="center">
 
@@ -140,5 +140,5 @@ The benchmark includes 60 problems (20 types $\times$ 3 levels) with 1-9 objecti
 </p>
 
 
-## Licence
+## License
 This project is under the BSD 3-Clause Clear License. See [LICENSE](LICENSE) for details.
