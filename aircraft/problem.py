@@ -728,7 +728,7 @@ class HPA443(HPADesigner):
         return f, g
 
 
-class HPA501(HPADesigner):
+class HPA541(HPADesigner):
     def __init__(self, n_div=4, level=0, NORMALIZED=True):
         assert n_div > 0 and isinstance(n_div, int)
         assert 0 <= level <= 2 and isinstance(level, int)
