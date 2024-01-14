@@ -444,7 +444,7 @@ class HPA131(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=10, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=False, PAYLOAD=False)
         self.nf = 1
-        self.ng = 0
+        self.ng = 3
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -462,7 +462,7 @@ class HPA142(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=False, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 1
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -480,7 +480,7 @@ class HPA143(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=False, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 1
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -498,7 +498,7 @@ class HPA241(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=10, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 2
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -516,7 +516,7 @@ class HPA222(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=False, DIHEDRAL=False, PAYLOAD=False)
         self.nf = 2
-        self.ng = 0
+        self.ng = 2
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
         self.max_dihedral_angle_at_root = 0.0 #[deg]
@@ -535,7 +535,7 @@ class HPA233(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=True)
         self.nf = 2
-        self.ng = 0
+        self.ng = 3
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -553,7 +553,7 @@ class HPA244(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 2
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -571,7 +571,7 @@ class HPA245(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 2
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -589,7 +589,7 @@ class HPA341(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=10, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 3
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -607,7 +607,7 @@ class HPA322(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=False, DIHEDRAL=False, PAYLOAD=False)
         self.nf = 3
-        self.ng = 0
+        self.ng = 2
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
         self.max_dihedral_angle_at_root = 0.0 #[deg]
@@ -626,7 +626,7 @@ class HPA333(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=True)
         self.nf = 3
-        self.ng = 0
+        self.ng = 3
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -644,7 +644,7 @@ class HPA344(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 3
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -662,7 +662,7 @@ class HPA345(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 3
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -680,7 +680,7 @@ class HPA441(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 4
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -698,7 +698,7 @@ class HPA422(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=False, DIHEDRAL=False, PAYLOAD=False)
         self.nf = 4
-        self.ng = 0
+        self.ng = 2
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
         self.max_dihedral_angle_at_root = 0.0 #[deg]
@@ -717,7 +717,7 @@ class HPA443(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 4
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -735,7 +735,7 @@ class HPA541(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 5
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -753,7 +753,7 @@ class HPA542(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=True)
         self.nf = 5
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -771,7 +771,7 @@ class HPA641(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=False)
         self.nf = 6
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
@@ -789,7 +789,7 @@ class HPA941(HPADesigner):
         AIRFOIL = False if level==0 else True
         super().__init__(n_div=n_div, max_plys=20, level=level, AIRFOIL=AIRFOIL, WIRE=True, DIHEDRAL=True, PAYLOAD=True)
         self.nf = 9
-        self.ng = 0
+        self.ng = 4
         self.nx = self.n_x
         self.NORMALIZED = NORMALIZED
     def __call__(self, x):
