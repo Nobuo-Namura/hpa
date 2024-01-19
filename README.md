@@ -1,8 +1,8 @@
-# Single and Multi-Objective Benchmark Problems Focusing on Human-Powered Aircraft Design
+# Single and Multi-Objective Optimization Benchmark Problems Focusing on Human-Powered Aircraft Design
 
 This repository provides the benchmark problems for single and multi-objective black-box optimization proposed in the following article. Please cite this article if you use these benchmark problems.
 
-[Nobuo Namura, "Single and Multi-Objective Benchmark Problems Focusing on Human-Powered Aircraft Design", arXiv:2312.08953, 2023.](https://arxiv.org/abs/2312.08953)
+[Nobuo Namura, "Single and Multi-Objective Optimization Benchmark Problems Focusing on Human-Powered Aircraft Design", arXiv:2312.08953, 2023.](https://arxiv.org/abs/2312.08953)
 
 ## Requirements
 Python 3.8.10 was used in the implementation.  
