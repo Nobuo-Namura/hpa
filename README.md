@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ### Unconstrained problems
 Each problem is defined as a class object like HPA201 (see the following "Benchmark Problem Definition" for details about naming rules). Such unconstrained problems can be used as:  
 ```
-from aircraft.problem import HPA201
+from hpa.problem import HPA201
 import numpy as np
 
 func = HPA201(n_div=4, level=0, NORMALIZED=True)
@@ -39,7 +39,7 @@ f = func(x)
 ### Constrained problems
 Constrained problems like HPA241 are used as:
 ```
-from aircraft.problem import HPA241
+from hpa.problem import HPA241
 import numpy as np
 
 func = HPA241(n_div=4, level=0, NORMALIZED=True)
@@ -51,7 +51,7 @@ f, g = func(x)
 ### Use with pymoo
 Problems can also be used as "ElementwiseProblem" class in pymoo as:
  ```
-from aircraft.adapter import PymooHPA
+from hpa.adapter import PymooHPA
 from pymoo.algorithms.soo.nonconvex.cmaes import CMAES
 from pymoo.optimize import minimize
 
@@ -64,7 +64,7 @@ print("Best solution found: \nX = %s\nF = %s" % (res.X, res.F))
 ### Visualization and output
 The obtained solution can be visualized and saved into files as:
  ```
-from aircraft.problem import HPA101
+from hpa.problem import HPA101
 
 # "func = problem.hpa" can be used instead
 func = HPA101(n_div=4, level=0, NORMALIZED=True)
