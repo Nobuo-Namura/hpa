@@ -2,7 +2,7 @@
 
 This repository provides the benchmark problems for single and multi-objective black-box optimization proposed in the following article. Please cite this article if you use these benchmark problems.
 
-[Nobuo Namura, "Single and Multi-Objective Optimization Benchmark Problems Focusing on Human-Powered Aircraft Design", arXiv:2312.08953, 2023.](https://arxiv.org/abs/2312.08953)
+Nobuo Namura, "Single and Multi-Objective Optimization Benchmark Problems Focusing on Human-Powered Aircraft Design", In Proceedings of the 13th International Conference on Evolutionary Multi-Criterion Optimization, Canberra, 2025. [[paper](https://link.springer.com/chapter/10.1007/978-981-96-3506-1_14)], [[arXiv](https://arxiv.org/abs/2312.08953)]
 
 ## Requirements
 Python 3.8.10 was used in the implementation.  
@@ -86,6 +86,12 @@ func.plot_wing3d()
 func.save(path='./', DISTRIBUTION=True, PERFORMANCE=True, FIGURE=False)
 ```
 
+### Approximated Pareto fronts
+Approximated Pareto fronts, utopia points, and nadir points used in the paper are available:  
+* [Approximated Pareto front for IGD calculation](igd_reference_points/n=4)  
+* [Utopia/Nadir points for objective space normalization](utopia_and_nadir_points/n=4)
+
+In HPA problems, the objectve space must be normalized before ${IGD}^{+}$ metrics calculation. 
 
 ## Human-Powered Aircraft (HPA)
 HPA gain propulsion by the pilot pedaling like a bicycle to rotate a propeller. HPA typically have a wingspan of 20-35 [m], comparable to that of a passenger aircraft, yet their mass is only about 25-35 [kg]. They often feature wings made of foam and balsa wood, covered with heat-shrinkable film, and supported by carbon fiber reinforced plastic (CFRP) pipe frameworks. We focus on optimizing the main wing design of an HPA, including wing shape, lamination of CFRP pipe, dihedral angle at the wing root, wire tension, and payload. The wing segmentation number $n$ alters the problem's dimension. $n=4$ was used in the original paper, as illustrated in the following figures.
