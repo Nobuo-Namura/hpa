@@ -1,0 +1,20 @@
+[project]
+name = "hpa"
+version = "0.0.1"
+dynamic = ["dependencies"]
+
+[build-system]
+requires = ["setuptools>=62.6"]
+build-backend = "setuptools.build_meta"
+
+# Dynamically get dependencies from requirements.txt
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+# Define the package main directory
+[tool.setuptools]
+packages = ["hpa"]
+
+# Define the data files (non-Python files) required in the package
+[tool.setuptools.package-data]
+hpa = ["airfoil_info/*"]
