@@ -6,18 +6,21 @@ Nobuo Namura, "Single and Multi-Objective Optimization Benchmark Problems Focusi
 
 ## Requirements
 Python 3.8.10 was used in the implementation.  
-To install requirements:
-
-```
-pip install -r requirements.txt
-```
-
 >matplotlib >= 3.7.4<br>
 >numpy >= 1.24.4<br>
 >openpyxl >= 3.1.2<br>
 >pandas >= 2.0.3<br>
 >pymoo >= 0.6.1.1<br>
 >scipy >= 1.10.1<br>
+
+## Installation
+```
+pip install git+https://github.com/Nobuo-Namura/hpa
+```
+or clone this repository and 
+```
+pip install .
+```
 
 ## Usage
 ### Unconstrained problems
